@@ -1,0 +1,9 @@
+# Shares the access of authority to the other user
+POST http://127.0.0.1:5050/access/share
+Content-Type: application/json
+
+{
+	"user1": "admin",
+	"pass1": "secret",
+	""
+}

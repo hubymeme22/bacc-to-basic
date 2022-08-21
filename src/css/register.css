@@ -1,0 +1,61 @@
+body {
+  background-color: rgb(221, 218, 196);
+}
+
+div.form {
+  width: 30%;
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 30px;
+  color: white;
+  font-family: Consolas;
+  background-color: rgb(15, 7, 56);
+  box-shadow: 0 10px 5px rgb(164, 162, 149);
+  transition: 0.5s;
+}
+div.form button {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 10px;
+  color: white;
+  padding: 15px;
+  font-size: 15px;
+  transition: 1s;
+}
+div.form button:hover {
+  background-color: white;
+  color: black;
+}
+div.form div.basic-word-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: auto 75%;
+}
+div.form div.basic-word-grid div.text-holder {
+  width: auto;
+}
+div.form div.basic-word-grid div.text-holder label {
+  font-size: 15px;
+}
+div.form div.basic-word-grid div.input-holder {
+  width: 100%;
+}
+div.form div.basic-word-grid div.input-holder input {
+  height: 20px;
+  width: 75%;
+  color: white;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  font-family: Consolas;
+  font-size: 15px;
+}
+div.form div.basic-word-grid div.input-holder input:focus {
+  outline: none;
+}
+
+div.form:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 5px rgb(164, 162, 149);
+}

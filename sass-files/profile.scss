@@ -1,0 +1,99 @@
+@import './common-colors';
+@import './fonts';
+@import './animations';
+
+$welcomeMessageSize: 40px;
+$subintroSize: 20px;
+
+* {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: $bodyBG;
+}
+
+section {
+	position: relative;
+	font-family: $fontOpenSans;
+	padding-bottom: 50%;
+}
+
+section.introduction{
+	p.intro {
+		font-size: $welcomeMessageSize;
+		font-weight: bold;
+		text-align: center;
+		text-shadow: 2px 2px $bodyShadow;
+		margin: 0;
+		margin-top: 23%;
+
+		animation: fadeInUpwards 1s forwards;
+	}
+
+	p.subintro {
+		font-size: $subintroSize;
+		text-align: center;
+		animation: fadeInUpwards 1s forwards;
+	}
+
+	button.continue-app {
+		background-color: transparent;
+		border: 1px solid black;
+		padding: 20px;
+		margin: auto;
+		font-family: $fontOpenSans;
+
+		transition: 0.5s;
+		animation: fadeInUpwards 1s forwards;
+	}
+
+	button.continue-app:hover {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}
+
+section.app-container {
+	padding-top: 40px;
+
+	p.app-list-title {
+		font-size: $welcomeMessageSize;
+		text-shadow: 2px 2px $bodyShadow;
+	}
+
+	p.note {
+		font-size: $subintroSize;
+		text-align: center;
+	}
+
+	div.card-container {
+		width: 100%;
+		height: auto;
+		text-align: center;
+
+		div.card {
+			padding: 100px;
+			border-radius: 20px;
+
+			display: inline-block;
+			vertical-align: center;
+			margin: 20px;
+
+			cursor: pointer;
+			background-color: $formThemeColor;
+			box-shadow: 0px 5px 5px $bodyShadow;
+			color: white;
+
+			transition: 1s;
+			font-size: 22px;
+			font-weight: bold;
+		}
+
+		div.card:hover {
+			padding: 120px;
+			transform: translateY(-25px);
+			box-shadow: 0px 20px 20px $bodyShadow;
+		}
+	}
+}

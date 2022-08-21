@@ -1,0 +1,88 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans");
+@keyframes fadeInUpwards {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(221, 218, 196);
+}
+
+section {
+  position: relative;
+  font-family: "Open Sans";
+  padding-bottom: 50%;
+}
+
+section.introduction p.intro {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px rgb(164, 162, 149);
+  margin: 0;
+  margin-top: 23%;
+  animation: fadeInUpwards 1s forwards;
+}
+section.introduction p.subintro {
+  font-size: 20px;
+  text-align: center;
+  animation: fadeInUpwards 1s forwards;
+}
+section.introduction button.continue-app {
+  background-color: transparent;
+  border: 1px solid black;
+  padding: 20px;
+  margin: auto;
+  font-family: "Open Sans";
+  transition: 0.5s;
+  animation: fadeInUpwards 1s forwards;
+}
+section.introduction button.continue-app:hover {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+section.app-container {
+  padding-top: 40px;
+}
+section.app-container p.app-list-title {
+  font-size: 40px;
+  text-shadow: 2px 2px rgb(164, 162, 149);
+}
+section.app-container p.note {
+  font-size: 20px;
+  text-align: center;
+}
+section.app-container div.card-container {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+section.app-container div.card-container div.card {
+  padding: 100px;
+  border-radius: 20px;
+  display: inline-block;
+  vertical-align: center;
+  margin: 20px;
+  cursor: pointer;
+  background-color: rgb(15, 7, 56);
+  box-shadow: 0px 5px 5px rgb(164, 162, 149);
+  color: white;
+  transition: 1s;
+  font-size: 22px;
+  font-weight: bold;
+}
+section.app-container div.card-container div.card:hover {
+  padding: 120px;
+  transform: translateY(-25px);
+  box-shadow: 0px 20px 20px rgb(164, 162, 149);
+}

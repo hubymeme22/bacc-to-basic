@@ -1,0 +1,56 @@
+body {
+  background-color: rgb(221, 218, 196);
+}
+
+#form-holder {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#form-holder div {
+  padding: 30px;
+  border-radius: 30px;
+  margin: auto;
+  color: white;
+  background-color: rgb(15, 7, 56);
+  font-family: Consolas;
+  box-shadow: 0px 10px 5px rgb(164, 162, 149);
+  transition: 1s;
+}
+#form-holder div input {
+  width: 200px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgb(195, 195, 195);
+  caret-color: white;
+  color: white;
+  font-family: Consolas;
+  transition: 0.5s;
+}
+#form-holder div input:focus {
+  outline: none;
+  border-bottom: 1px solid white;
+}
+#form-holder div button {
+  width: 100px;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  transition: 1s;
+}
+#form-holder div button:hover {
+  background-color: white;
+  color: black;
+}
+#form-holder div p {
+  color: rgb(206, 40, 40);
+}
+#form-holder div:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 15px 5px rgb(164, 162, 149);
+}

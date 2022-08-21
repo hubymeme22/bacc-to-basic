@@ -1,0 +1,13 @@
+body {
+  background-color: rgb(106, 87, 37);
+  font-family: Consolas;
+  color: white;
+}
+
+img {
+  border: 3px solid black;
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 30px;
+}

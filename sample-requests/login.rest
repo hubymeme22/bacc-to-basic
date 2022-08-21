@@ -1,0 +1,8 @@
+# Logs in your account
+POST http://127.0.0.1:5050/login
+Content-Type: application/json
+
+{
+	"user": "username",
+	"pass": "horror"
+}

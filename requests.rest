@@ -1,0 +1,6 @@
+# Gets the accounts available in the pseudo database
+GET http://127.0.0.1:5050/accounts
+
+### 
+GET http://127.0.0.1:5050/profile
+koala: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiZGF0YSI6eyJwYXNzd29yZCI6IiQyYiQxMCRUdC9IZEgyL2hzMkJPL1ByZTQwZ1J1alUveEZTT2JjSVFjN2ZsSktiQjRKQ0NhUVJOWG9LYSIsImxldmVsIjoxfSwiaWF0IjoxNjU5ODk1NTI2fQ.p7nXFqgCHcYCpopFqZpc9c0Unx8XfC5-NWpf7A6Jj9s

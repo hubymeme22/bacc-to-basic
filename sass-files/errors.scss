@@ -1,0 +1,16 @@
+$errorBG1: rgb(106, 87, 37);
+$errorBG2: rgb(106, 37, 37);
+
+body {
+	background-color: $errorBG1;
+	font-family: Consolas;
+	color: white;
+}
+
+img {
+	border: 3px solid black;
+	display: block;
+	width: 50%;
+	margin: 0 auto;
+	margin-top: 30px;
+}

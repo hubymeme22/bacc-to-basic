@@ -1,0 +1,13 @@
+# Registers the following account to the API
+POST http://127.0.0.1:5050/create
+Content-Type: application/json
+
+{
+	"user": "username",
+	"pass": "horror",
+	"data": {
+		"name": "HunterxHunter",
+		"age": 22,
+		"gender": "Snail"
+	}
+}

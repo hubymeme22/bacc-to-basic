@@ -1,0 +1,64 @@
+@keyframes fadeInUpwards {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+body {
+  background-color: rgb(221, 218, 196);
+}
+
+section.id-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+section.id-container div.id-card {
+  width: 33%;
+  margin: auto;
+  margin-top: 100px;
+  padding: 20px;
+  border-radius: 30px;
+  background-color: rgb(136, 219, 191);
+  box-shadow: 0 20px 5px rgb(164, 162, 149);
+  font-family: Consolas;
+  font-size: 16px;
+  animation: fadeInUpwards 1s forwards;
+}
+section.id-container div.id-card div.profile {
+  height: 100px;
+  width: 100px;
+  background-color: black;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+section.id-container div.id-card p.name {
+  text-align: center;
+  font-size: 25px;
+}
+section.id-container div.id-card div.details-container {
+  width: 80%;
+  padding: 10px;
+  background-color: black;
+  text-align: center;
+  color: white;
+  margin: auto;
+  font-size: 16px;
+  border-radius: 10px;
+}
+section.id-container div.id-card div.details-container b {
+  color: rgb(155, 155, 155);
+}
+section.id-container div.id-card textarea {
+  margin: auto;
+  height: 80px;
+  width: 80%;
+  max-width: 80%;
+}
