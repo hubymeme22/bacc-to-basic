@@ -1,10 +1,12 @@
 // functions for the whole program
+const diaryData = {};
 const addNewDiary = (diaryTitle) => {
-	const container = document.getElementById('diary-container');
-	const code = `<div class="add-diary"><div>${diaryTitle}</div></div>`;
-	container.innerHTML = code + container.innerHTML;
-}
+	if (diaryTitle === '') return;
 
+	const container = document.getElementById('place-diary-here');
+	const code = `<div class="add-diary"><div>${diaryTitle}</div></div>`;
+	container.innerHTML += code;
+}
 
 // Initial interface part
 const back = document.getElementById('go-back');
