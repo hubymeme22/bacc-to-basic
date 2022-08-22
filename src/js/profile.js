@@ -8,7 +8,7 @@ continueButton.onclick = () => {
 };
 
 diaryButton.onclick = () => {
-	window.location.href = '#';
+	window.location.href = '/diaryapp.html';
 }
 
 notesButton.onclick = () => {

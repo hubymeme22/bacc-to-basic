@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="css/diary.css">
+	<link rel="stylesheet" href="css/common.css">
+	<title>Diary App</title>
+</head>
+<body>
+	<main>
+		<br><br>
+		<h1 class="intro center-text">Mema Diary App</h1>
+		<button class="go-back" id="go-back">Go Back</button>
+
+		<!-- <p class="center-text"><b>Too lazey to design UwU</b></p> -->
+
+		<br><br><br>
+		<section class="diary-container" id="diary-container">
+			<br>
+			<div class="add-diary add-diary-button" id="add-new-diary"><div><b>Add New</b></div></div>
+		</section>
+
+		<!-- Diary input -->
+		<section class="diary-input center" id="diary-input" style="display: none;">
+			<div class="diary-form">
+				<div class="title-date-grid">
+					<input type="text" class="title-input" id="title-input" placeholder="Title">
+					<br><br>
+					<input type="text" class="title-input" id="date-input" placeholder="Date" readonly>
+				</div>
+				<br><br>
+				<textarea rows="12" placeholder="Notes Here..."></textarea>
+
+				<br><br>
+				<button class="diary-input" id="add-diary">Add Diary Note</button>
+				<button class="diary-input" id="close-diary">Close</button>
+			</div>
+		</section>
+
+		<script src="js/diary.js"></script>
+	</main>
+</body>
+</html>

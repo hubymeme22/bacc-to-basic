@@ -1,0 +1,139 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans");
+@keyframes fadeInUpwards {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.fadeInUpwards {
+  animation: fadeInUpwards 1s forwards;
+}
+
+.fadeOut {
+  animation: fadeOut 1s forwards;
+}
+
+* {
+  font-family: "Open Sans";
+}
+
+body {
+  background: rgb(221, 218, 196);
+}
+
+h1.intro {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px rgb(164, 162, 149);
+}
+
+section.diary-container {
+  height: auto;
+  width: 100%;
+  text-align: center;
+}
+section.diary-container div.add-diary {
+  height: 200px;
+  width: 200px;
+  display: inline-block;
+  border-radius: 20px;
+  background-color: rgb(15, 7, 56);
+  color: white;
+  text-align: center;
+  box-shadow: 0px 5px 5px rgb(164, 162, 149);
+  margin: 10px;
+  transition: 1s;
+  cursor: pointer;
+}
+section.diary-container div.add-diary div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section.diary-container div.add-diary:hover {
+  height: 220px;
+  width: 220px;
+  transform: translateY(-10px);
+}
+section.diary-container div.add-diary-button {
+  background-color: rgb(28, 61, 25);
+}
+
+section.diary-input {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+section.diary-input div.diary-form {
+  width: 30%;
+  padding: 20px;
+  margin: auto;
+  color: white;
+  border-radius: 20px;
+  border: 1px solid white;
+  background-color: rgb(15, 7, 56);
+  animation: fadeInUpwards 1s forwards;
+}
+section.diary-input div.diary-form input.title-input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  width: 50%;
+  font-size: 15px;
+  color: white;
+}
+section.diary-input div.diary-form input.title-input:focus {
+  outline: none;
+}
+section.diary-input div.diary-form textarea {
+  width: 100%;
+  height: 30%;
+  max-width: 100%;
+  background-color: rgb(16, 11, 37);
+  color: white;
+  border: 1px solid white;
+}
+section.diary-input div.diary-form button.diary-input {
+  padding: 20px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  transition: 1s;
+  display: inline-block;
+}
+section.diary-input div.diary-form button.diary-input:hover {
+  background-color: white;
+  color: black;
+}
+
+button {
+  padding: 10px;
+  display: block;
+  margin: auto;
+  background-color: transparent;
+  border: 1px solid black;
+  transition: 1s;
+}
+
+button:hover {
+  padding-left: 20px;
+  padding-right: 20px;
+}
