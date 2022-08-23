@@ -13,6 +13,7 @@ app.use(express.static('src'));
 
 const Auth  = require('./authentication');
 const AuthR = require('./authorization');
+const App   = require('./appMods');
 
 //////////////////////
 //   GET requests   //
@@ -29,12 +30,10 @@ app.get('/profile', AuthR.profileAuthorize, (req, res) => {
 ///////////////////////
 //   POST requests   //
 ///////////////////////
-app.post('/create', async (req, res) => {
+app.post('/create', App.validateData, async (req, res) => {
 	const username = req.body.user;
 	const password = req.body.pass;
-	let data = req.body.data
-
-	if (!data) data = { "name": "Koala Man", "gender": "FMale", "age": 69, "note": "" };
+	const data = req.body.data
 	Auth.addAcc(res, username, password, data);
 });
 
@@ -43,6 +42,8 @@ app.post('/login', async (req, res) => {
 	const password = req.body.pass;
 	Auth.checkCreds(res, username, password);
 });
+
+app.post('/diary', App.addDiaryNote);
 
 const IP = process.env.IP;
 const PORT = process.env.PORT;
