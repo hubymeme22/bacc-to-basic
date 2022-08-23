@@ -8,3 +8,7 @@ This one is made for time killin' nothing more... fleece don't judge me hehe... 
 in CSRF... take advantage on opensource code w/env variables... lol), so you can practice for CTFs too!
 
 Start server by: `node app.js`, view page on: `http://localhost:5050/`
+
+## Hints for vulnerabilities:
+- Server uses JWT... analyze the cookies
+- Check the Routes!!!
