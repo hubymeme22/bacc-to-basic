@@ -117,6 +117,8 @@ section.diary-input div.diary-form button.diary-input {
   border: 1px solid white;
   color: white;
   transition: 1s;
+  margin: 10px;
+  border-radius: 20px;
   display: inline-block;
 }
 section.diary-input div.diary-form button.diary-input:hover {
