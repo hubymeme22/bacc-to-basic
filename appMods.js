@@ -7,7 +7,6 @@ const fs = require('fs');
 ////////////////////////
 // adds the diary to the specified user
 const addDiary = (user, title, date, content) => {
-	console.log(pseudoDatabase[user]['data']['diary'][date]);
 	if (pseudoDatabase[user]['data']['diary'][date] != undefined)
 		return false;
 
@@ -57,12 +56,25 @@ const addDiaryNote = (req, res, next) => {
 		if (addDiary(author, title, date, content))
 			return res.status(200).json({status : 'Good'});
 		res.status(403).json({status : 'Used Date'});
-	})
+	});
+
+	next();
+}
+
+// retrieves diary of specific user
+const retrieveDiary = (req, res, next) => {
+	// check if the web token is valid
+	const jsonToken = req.headers['cookie'].split('=')[1];
+	jwt.verify(jsonToken, process.env.SERVER_SECRET_TOKEN, (error, data) => {
+		if (error) return res.status(403).json({status: 'Invalid Token'});
+		res.status(200).send(pseudoDatabase[data.username]['data']['diary']);
+	});
 
 	next();
 }
 
 module.exports = {
 	'addDiaryNote' : addDiaryNote,
-	'validateData' : checkData
+	'validateData' : checkData,
+	'getDiary' : retrieveDiary
 }

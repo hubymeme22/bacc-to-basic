@@ -27,6 +27,8 @@ app.get('/profile', AuthR.profileAuthorize, (req, res) => {
 	res.send(Auth.db[username]);
 });
 
+app.get('/diary', App.getDiary);
+
 ///////////////////////
 //   POST requests   //
 ///////////////////////

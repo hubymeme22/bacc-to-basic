@@ -11,9 +11,7 @@ const pseudoDatabase = {
 			"name": "Hubert F. Espinola I",
 			"gender": "Male",
 			"age": 22,
-			"diary": {
-				"Aug. 22, 2022": ["title", "Content"]
-			}
+			"diary": {}
 		},
 	}
 };

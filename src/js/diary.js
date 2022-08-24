@@ -1,11 +1,55 @@
 // functions for the whole program
-const diaryData = {};
+let diaryData = {};
 const addNewDiary = (diaryTitle) => {
 	if (diaryTitle === '') return;
 
 	const container = document.getElementById('place-diary-here');
 	const code = `<div class="add-diary"><div>${diaryTitle}</div></div>`;
 	container.innerHTML += code;
+}
+
+const postDiary = (title, date, content) => {
+	fetch('/diary', {
+		"method": "POST",
+		"headers": {
+			"Content-Type": "application/json",
+			"Cookie": window.Cookie
+		},
+		"body": JSON.stringify({
+			"title": title,
+			"date": date,
+			"content": content
+		})
+	})
+
+	.then( response => { return response.json() })
+	.then( response => {
+		addNewDiary(title);
+	})
+
+	.catch( error => {
+		alert('Bad Request');
+	});
+}
+
+const getDiary = () => {
+	fetch('/diary', {
+		"headers": {
+			"Cookie": window.Cookie
+		}
+	})
+		.then( response => { return response.json() })
+		.then( response => {
+			diaryData = response;
+			console.log(diaryData);
+			Object.keys(diaryData).forEach(key => {
+				addNewDiary(diaryData[key][0]);
+			});
+		})
+
+		.catch( error => {
+			window.location.href = '/errors/403.html';
+		});
 }
 
 // Initial interface part
@@ -47,6 +91,17 @@ closeForm.onclick = () => {
 
 addDiaryNote.onclick = () => {
 	const titleInput = document.getElementById('title-input');
-	addNewDiary(titleInput.value);
+	const dateInput  = document.getElementById('date-input');
+	const contentInput = document.getElementById('diary-content');
+
+	postDiary(titleInput.value, dateInput.value, contentInput.value);
+
+	// clears input field
+	titleInput.value = '';
+	dateInput.value = '';
+	contentInput.value = '';
+
 	closeForm.onclick();
 }
+
+getDiary();
