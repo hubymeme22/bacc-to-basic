@@ -71,7 +71,7 @@ diary.onclick = () => {
 
 	// retrieves the current date
 	const dateArray = (new Date()).toString().split(' ');
-	const currentDate = `${dateArray[1]}. ${dateArray[2]}, ${dateArray[3]} ${dateArray[0]}`;
+	const currentDate = `${dateArray[1]}. ${dateArray[2]}, ${dateArray[3]} ${dateArray[0]} ${dateArray[4]}`;
 	diaryDate.value = currentDate;
 }
 
